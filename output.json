@@ -1,0 +1,1275 @@
+{
+  "metadata": {
+    "clinic_wide_metrics": {
+      "total_revenue_all_services": {
+        "original_name": "Total Revenue  - All Services",
+        "category": null,
+        "target_or_formula": "Target"
+      },
+      "total_product_revenue_all_services": {
+        "original_name": "Total Product Revenue - All Services",
+        "category": null,
+        "target_or_formula": null
+      },
+      "theraguns_sold_count": {
+        "original_name": "Theraguns Sold (#)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "pillows": {
+        "original_name": "Pillows",
+        "category": null,
+        "target_or_formula": null
+      },
+      "custom_knee_brace": {
+        "original_name": "Custom Knee Brace",
+        "category": null,
+        "target_or_formula": null
+      },
+      "orthotics": {
+        "original_name": "Orthotics",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_payments_all_services": {
+        "original_name": "Total Payments - All Services",
+        "category": null,
+        "target_or_formula": null
+      },
+      "revenue_collected_4_wk_avg": {
+        "original_name": "Revenue Collected (4 wk avg)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "accounts_receivable_90_days": {
+        "original_name": "AR > 90 days",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_accounts_receivable": {
+        "original_name": "Total AR",
+        "category": null,
+        "target_or_formula": null
+      },
+      "online_bookings_via_jane": {
+        "original_name": "Online Bookings Via Jane",
+        "category": null,
+        "target_or_formula": null
+      },
+      "consult_requests": {
+        "original_name": "Consult Requests",
+        "category": null,
+        "target_or_formula": null
+      },
+      "consults_turned_assessments": {
+        "original_name": "Consults turned Ax",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_assessments_all_services": {
+        "original_name": "Total Ax  - All Services",
+        "category": null,
+        "target_or_formula": null
+      },
+      "assessments_4_week_avg": {
+        "original_name": "Ax 4 Week Avg",
+        "category": null,
+        "target_or_formula": null
+      },
+      "count_of_prescriptions_clinic_wide": {
+        "original_name": "# of Rx (Clinic Wide)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "clinic_patient_visit_average": {
+        "original_name": "Clinic PVA",
+        "category": null,
+        "target_or_formula": null
+      },
+      "cross_referral_assessments_total": {
+        "original_name": "CROSS REFERRAL AX (Total)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "submitted": {
+        "original_name": "Submitted",
+        "category": null,
+        "target_or_formula": null
+      },
+      "unsubmitted": {
+        "original_name": "Unsubmitted",
+        "category": null,
+        "target_or_formula": null
+      },
+      "cancelled_total_assessments": {
+        "original_name": "Cancelled   Total Ax",
+        "category": null,
+        "target_or_formula": null
+      },
+      "cancelled_assessments_online": {
+        "original_name": "Cancelled  Ax (Online)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "cancelled_assessments_online_percentage": {
+        "original_name": "Cancelled Ax Online %",
+        "category": null,
+        "target_or_formula": null
+      },
+      "cancelled_online_assessments_winback": {
+        "original_name": "Cancelled Online Ax WINBACK",
+        "category": null,
+        "target_or_formula": null
+      },
+      "cancellation_percentage": {
+        "original_name": "Cancellation %",
+        "category": null,
+        "target_or_formula": null
+      },
+      "count_of_fall_offs_total": {
+        "original_name": "# of Fall Offs (Total)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "fall_off_percentage_called": {
+        "original_name": "Fall Off % Called",
+        "category": null,
+        "target_or_formula": null
+      },
+      "fb_reviews": {
+        "original_name": "FB Reviews",
+        "category": null,
+        "target_or_formula": null
+      },
+      "google_reviews": {
+        "original_name": "Google Reviews",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_calls_5530": {
+        "original_name": "Total Calls (5530)",
+        "category": "PHONE PERFORMANCE",
+        "target_or_formula": null
+      },
+      "missed_calls": {
+        "original_name": "Missed Calls",
+        "category": null,
+        "target_or_formula": null
+      },
+      "answer_rate": {
+        "original_name": "Answer Rate",
+        "category": null,
+        "target_or_formula": null
+      },
+      "booking_rate": {
+        "original_name": "Booking Rate",
+        "category": null,
+        "target_or_formula": null
+      },
+      "new_bookings_online": {
+        "original_name": "NBO",
+        "category": null,
+        "target_or_formula": null
+      },
+      "did_not_book": {
+        "original_name": "DNB",
+        "category": null,
+        "target_or_formula": null
+      },
+      "winback_assessments_only": {
+        "original_name": "Winback (Ax Only)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "new_assessment_revenue_collected_at_assessments": {
+        "original_name": "NAR Collected at Ax",
+        "category": null,
+        "target_or_formula": null
+      },
+      "new_assessment_revenue_percentage_collected_at_assessments": {
+        "original_name": "NAR % Collected at Ax",
+        "category": null,
+        "target_or_formula": null
+      },
+      "average_prescribed": {
+        "original_name": "Average  Prescribed",
+        "category": null,
+        "target_or_formula": null
+      },
+      "bookedprescribed_percentage_total": {
+        "original_name": "Booked:Prescribed %  (Total)",
+        "category": null,
+        "target_or_formula": null
+      },
+      "count_of_treatments_plan_given": {
+        "original_name": "# of Tx Plan Given",
+        "category": null,
+        "target_or_formula": null
+      },
+      "percentage_treatments_plan_used": {
+        "original_name": "% Tx Plan Used",
+        "category": null,
+        "target_or_formula": null
+      },
+      "net_promoter_score_collected_at_assessments": {
+        "original_name": "NPS Collected at Ax",
+        "category": null,
+        "target_or_formula": null
+      },
+      "net_promoter_score_percentage_collected_at_assessments": {
+        "original_name": "NPS % Collected at Ax",
+        "category": null,
+        "target_or_formula": null
+      },
+      "follow_up_won": {
+        "original_name": "Follow-up  won",
+        "category": null,
+        "target_or_formula": null
+      },
+      "dropped_clients_won": {
+        "original_name": "Dropped Clients won",
+        "category": null,
+        "target_or_formula": null
+      },
+      "new_assessment_revenue_submission": {
+        "original_name": "NAR Submission",
+        "category": null,
+        "target_or_formula": null
+      },
+      "new_assessment_revenue_percentage": {
+        "original_name": "NAR Percentage",
+        "category": null,
+        "target_or_formula": null
+      },
+      "shockwave_alone": {
+        "original_name": "Shockwave Alone",
+        "category": null,
+        "target_or_formula": null
+      },
+      "shockwave_pt": {
+        "original_name": "Shockwave + PT",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_shockwave_revenue": {
+        "original_name": "Total Shockwave Revenue",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_patient_database": {
+        "original_name": "Total Patient Database",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_active_patients": {
+        "original_name": "Total Active Patients",
+        "category": null,
+        "target_or_formula": null
+      },
+      "calls_made_by_other_clinicians": {
+        "original_name": "Calls made by Other Clinicians",
+        "category": null,
+        "target_or_formula": null
+      },
+      "alberta_health_services_active_clients": {
+        "original_name": "AHS active clients",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_active_called": {
+        "original_name": "Total Active Called",
+        "category": null,
+        "target_or_formula": null
+      },
+      "discovery_booked": {
+        "original_name": "Discovery Booked",
+        "category": null,
+        "target_or_formula": null
+      },
+      "doctor_faxees_sent": {
+        "original_name": "MD faxees sent",
+        "category": null,
+        "target_or_formula": null
+      },
+      "doctors_called": {
+        "original_name": "MD's called",
+        "category": null,
+        "target_or_formula": null
+      },
+      "emails_sent": {
+        "original_name": "Emails Sent",
+        "category": null,
+        "target_or_formula": null
+      },
+      "open_rate": {
+        "original_name": "Open Rate",
+        "category": null,
+        "target_or_formula": null
+      },
+      "email_responses": {
+        "original_name": "Email Responses",
+        "category": null,
+        "target_or_formula": null
+      },
+      "beth_outgoing_calls": {
+        "original_name": "Beth Outgoing Calls",
+        "category": null,
+        "target_or_formula": null
+      },
+      "beth_incoming_calls": {
+        "original_name": "Beth incoming Calls",
+        "category": null,
+        "target_or_formula": null
+      },
+      "total_calls": {
+        "original_name": "Total Calls",
+        "category": null,
+        "target_or_formula": null
+      },
+      "discovery_call_booked": {
+        "original_name": "Discovery Call Booked",
+        "category": null,
+        "target_or_formula": null
+      },
+      "conversion": {
+        "original_name": "Conversion",
+        "category": null,
+        "target_or_formula": null
+      },
+      "discovery_call_delivered": {
+        "original_name": "Discovery Call Delivered",
+        "category": null,
+        "target_or_formula": null
+      },
+      "paid_virtual_delivered": {
+        "original_name": "Paid Virtual Delivered",
+        "category": null,
+        "target_or_formula": null
+      },
+      "virtual_revenue": {
+        "original_name": "Virtual Revenue",
+        "category": null,
+        "target_or_formula": null
+      },
+      "visit": {
+        "original_name": "$$/Visit",
+        "category": null,
+        "target_or_formula": null
+      },
+      "conversion_1": {
+        "original_name": "Conversion",
+        "category": null,
+        "target_or_formula": null
+      },
+      "in_person_visit": {
+        "original_name": "In-Person Visit",
+        "category": null,
+        "target_or_formula": null
+      },
+      "doctor_follow_up_post_virtual_visit_treatments_calls": {
+        "original_name": "MD F/U post  VV tx calls",
+        "category": null,
+        "target_or_formula": null
+      }
+    },
+    "disciplines": {
+      "physiotherapy": {
+        "total_revenue": {
+          "original_name": "PT Total Revenue",
+          "category": null,
+          "target_or_formula": null
+        },
+        "assessments": {
+          "original_name": "PT Ax",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatments": {
+          "original_name": "PT Tx",
+          "category": null,
+          "target_or_formula": null
+        },
+        "alberta_health_services_assessments": {
+          "original_name": "PT AHS Ax",
+          "category": null,
+          "target_or_formula": null
+        },
+        "percentage_of_total_assessments_alberta_health_services": {
+          "original_name": "% of Total Ax (AHS)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "alberta_health_services_treatments_total": {
+          "original_name": "PT AHS Tx (Total)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "alberta_health_services_assessments_hipknee_class": {
+          "original_name": "PT AHS  Ax (Hip&Knee Class)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "alberta_health_services_treatments_hipknee_class": {
+          "original_name": "PT AHS Tx (Hip&Knee Class)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "patient_visit_average_4_wk": {
+          "original_name": "PVA  (4 wk avg)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "available_appointments": {
+          "original_name": "PT Available appts",
+          "category": null,
+          "target_or_formula": null
+        },
+        "total_available_hours_total": {
+          "original_name": "PT Total Available Hours  (Total)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "total_available_hours_pt_only": {
+          "original_name": "PT Total Available Hours  (PT only)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "total_booked_hours": {
+          "original_name": "PT Total BOOKED hours",
+          "category": null,
+          "target_or_formula": null
+        },
+        "arrived_appointments": {
+          "original_name": "PT Arrived appts",
+          "category": null,
+          "target_or_formula": null
+        },
+        "utilization_with_kines": {
+          "original_name": "Utilization (With Kines)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "utilization_without_kines": {
+          "original_name": "Utilization (Without Kines)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatment_plan_given": {
+          "original_name": "PT TP Given",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatment_plan_utilization": {
+          "original_name": "TP Utilization",
+          "category": null,
+          "target_or_formula": null
+        }
+      },
+      "massage_therapy": {
+        "total_revenue": {
+          "original_name": "RMT Total Revenue",
+          "category": null,
+          "target_or_formula": null
+        },
+        "assessments": {
+          "original_name": "RMT  Ax",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatments": {
+          "original_name": "RMT  Tx",
+          "category": null,
+          "target_or_formula": null
+        },
+        "patient_visit_average_4_wk": {
+          "original_name": "PVA  (4 wk avg)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "available_slots": {
+          "original_name": "RMT Available slots",
+          "category": null,
+          "target_or_formula": null
+        },
+        "hours_available": {
+          "original_name": "RMT Hours Available",
+          "category": null,
+          "target_or_formula": null
+        },
+        "booked_hours": {
+          "original_name": "RMT BOOKED hours",
+          "category": null,
+          "target_or_formula": null
+        },
+        "arrived_slots": {
+          "original_name": "RMT Arrived slots",
+          "category": null,
+          "target_or_formula": null
+        },
+        "utilization": {
+          "original_name": "Utilization",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatment_plan_given": {
+          "original_name": "RMT TP Given",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatment_plan_utilization": {
+          "original_name": "TP Utilization",
+          "category": null,
+          "target_or_formula": null
+        }
+      },
+      "chiropractic": {
+        "total_revenue": {
+          "original_name": "CHIRO  Total Revenue",
+          "category": null,
+          "target_or_formula": null
+        },
+        "assessments": {
+          "original_name": "CHIRO Ax",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatments": {
+          "original_name": "CHIRO Tx",
+          "category": null,
+          "target_or_formula": null
+        },
+        "patient_visit_average_4_wk": {
+          "original_name": "PVA  (4 wk avg)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "available_slots": {
+          "original_name": "CHIRO Available slots",
+          "category": null,
+          "target_or_formula": null
+        },
+        "hours_available": {
+          "original_name": "Chiro Hours Available",
+          "category": null,
+          "target_or_formula": null
+        },
+        "booked_hours": {
+          "original_name": "Chiro BOOKED hours",
+          "category": null,
+          "target_or_formula": null
+        },
+        "arrived_slots": {
+          "original_name": "CHIRO Arrived slots",
+          "category": null,
+          "target_or_formula": null
+        },
+        "utilization": {
+          "original_name": "Utilization",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatment_plan_given": {
+          "original_name": "CHIRO TP Given",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatment_plan_utilization": {
+          "original_name": "TP Utilization",
+          "category": null,
+          "target_or_formula": null
+        }
+      },
+      "pelvic_health": {
+        "total_revenue": {
+          "original_name": "Pelvic Health Total Revenue",
+          "category": null,
+          "target_or_formula": null
+        },
+        "assessments": {
+          "original_name": "Pelvic Health Ax",
+          "category": null,
+          "target_or_formula": null
+        },
+        "treatments": {
+          "original_name": "Pelvic Health Tx",
+          "category": null,
+          "target_or_formula": null
+        },
+        "patient_visit_average_4_wk": {
+          "original_name": "PVA  (4 wk avg)",
+          "category": null,
+          "target_or_formula": null
+        },
+        "true_patient_visit_average_average": {
+          "original_name": "True PVA Average",
+          "category": null,
+          "target_or_formula": null
+        },
+        "utilization": {
+          "original_name": "Utilization",
+          "category": null,
+          "target_or_formula": null
+        },
+        "patient_visit_average_average": {
+          "original_name": "PVA AVERAGE",
+          "category": null,
+          "target_or_formula": null
+        },
+        "available_slots": {
+          "original_name": "Pelvic Health Available slots",
+          "category": null,
+          "target_or_formula": null
+        },
+        "arrived_slots": {
+          "original_name": "Pelvic Health Arrived slots",
+          "category": null,
+          "target_or_formula": null
+        },
+        "utilization_1": {
+          "original_name": "Utilization",
+          "category": null,
+          "target_or_formula": null
+        }
+      }
+    }
+  },
+  "dates": [
+    "2026-02-16",
+    "2026-02-09",
+    "2026-02-02"
+  ],
+  "time_series": {
+    "clinic_wide_metrics": {
+      "total_revenue_all_services": [
+        40454.28,
+        42360.64,
+        39202.17
+      ],
+      "total_product_revenue_all_services": [
+        null,
+        null,
+        null
+      ],
+      "theraguns_sold_count": [
+        null,
+        null,
+        null
+      ],
+      "pillows": [
+        null,
+        null,
+        null
+      ],
+      "custom_knee_brace": [
+        null,
+        null,
+        null
+      ],
+      "orthotics": [
+        null,
+        null,
+        null
+      ],
+      "total_payments_all_services": [
+        48464.61,
+        34022.04,
+        40068.6
+      ],
+      "revenue_collected_4_wk_avg": [
+        1.00441053,
+        0.9083875359,
+        1.022101583
+      ],
+      "accounts_receivable_90_days": [
+        0,
+        182,
+        60
+      ],
+      "total_accounts_receivable": [
+        56578.43,
+        65386.72,
+        57239.65
+      ],
+      "online_bookings_via_jane": [
+        36,
+        45,
+        43
+      ],
+      "consult_requests": [
+        null,
+        null,
+        null
+      ],
+      "consults_turned_assessments": [
+        null,
+        null,
+        null
+      ],
+      "total_assessments_all_services": [
+        42,
+        54,
+        56
+      ],
+      "assessments_4_week_avg": [
+        50.66666667,
+        55,
+        56
+      ],
+      "count_of_prescriptions_clinic_wide": [
+        377,
+        377,
+        340
+      ],
+      "clinic_patient_visit_average": [
+        7.440789474,
+        6.854545455,
+        6.071428571
+      ],
+      "cross_referral_assessments_total": [
+        null,
+        null,
+        null
+      ],
+      "submitted": [
+        498,
+        669,
+        599
+      ],
+      "unsubmitted": [
+        100,
+        129,
+        44
+      ],
+      "cancelled_total_assessments": [
+        14,
+        8,
+        9
+      ],
+      "cancelled_assessments_online": [
+        0,
+        0,
+        0
+      ],
+      "cancelled_assessments_online_percentage": [
+        0,
+        0,
+        0
+      ],
+      "cancelled_online_assessments_winback": [
+        null,
+        null,
+        null
+      ],
+      "cancellation_percentage": [
+        0.1707317073,
+        0.1149897331,
+        0.1236203091
+      ],
+      "count_of_fall_offs_total": [
+        null,
+        113,
+        103
+      ],
+      "fall_off_percentage_called": [
+        null,
+        null,
+        null
+      ],
+      "fb_reviews": [
+        null,
+        0,
+        0
+      ],
+      "google_reviews": [
+        1227,
+        1224,
+        1217
+      ],
+      "total_calls_5530": [
+        255,
+        281,
+        282
+      ],
+      "missed_calls": [
+        17,
+        15,
+        16
+      ],
+      "answer_rate": [
+        0.93,
+        0.94,
+        0.94
+      ],
+      "booking_rate": [
+        0.69,
+        0.73,
+        0.78
+      ],
+      "new_bookings_online": [
+        26,
+        26,
+        33
+      ],
+      "did_not_book": [
+        8,
+        7,
+        7
+      ],
+      "winback_assessments_only": [
+        0,
+        0,
+        2
+      ],
+      "new_assessment_revenue_collected_at_assessments": [
+        39,
+        56,
+        56
+      ],
+      "new_assessment_revenue_percentage_collected_at_assessments": [
+        0.9285714286,
+        1.037037037,
+        1
+      ],
+      "average_prescribed": [
+        2.87,
+        3.26,
+        3.35
+      ],
+      "bookedprescribed_percentage_total": [
+        0.5357142857,
+        0.5433526012,
+        0.5303867403
+      ],
+      "count_of_treatments_plan_given": [
+        20,
+        30,
+        38
+      ],
+      "percentage_treatments_plan_used": [
+        0.4761904762,
+        0.5555555556,
+        0.6785714286
+      ],
+      "net_promoter_score_collected_at_assessments": [
+        null,
+        null,
+        null
+      ],
+      "net_promoter_score_percentage_collected_at_assessments": [
+        null,
+        null,
+        null
+      ],
+      "follow_up_won": [
+        null,
+        null,
+        null
+      ],
+      "dropped_clients_won": [
+        null,
+        null,
+        null
+      ],
+      "new_assessment_revenue_submission": [
+        null,
+        null,
+        null
+      ],
+      "new_assessment_revenue_percentage": [
+        null,
+        null,
+        null
+      ],
+      "shockwave_alone": [
+        null,
+        null,
+        null
+      ],
+      "shockwave_pt": [
+        null,
+        null,
+        null
+      ],
+      "total_shockwave_revenue": [
+        null,
+        null,
+        null
+      ],
+      "total_patient_database": [
+        null,
+        null,
+        null
+      ],
+      "total_active_patients": [
+        null,
+        null,
+        null
+      ],
+      "calls_made_by_other_clinicians": [
+        null,
+        null,
+        null
+      ],
+      "alberta_health_services_active_clients": [
+        null,
+        null,
+        null
+      ],
+      "total_active_called": [
+        null,
+        null,
+        null
+      ],
+      "discovery_booked": [
+        null,
+        null,
+        null
+      ],
+      "doctor_faxees_sent": [
+        null,
+        null,
+        null
+      ],
+      "doctors_called": [
+        null,
+        null,
+        null
+      ],
+      "emails_sent": [
+        null,
+        null,
+        null
+      ],
+      "open_rate": [
+        null,
+        null,
+        null
+      ],
+      "email_responses": [
+        null,
+        null,
+        null
+      ],
+      "beth_outgoing_calls": [
+        null,
+        null,
+        null
+      ],
+      "beth_incoming_calls": [
+        null,
+        null,
+        null
+      ],
+      "total_calls": [
+        null,
+        null,
+        null
+      ],
+      "discovery_call_booked": [
+        null,
+        null,
+        null
+      ],
+      "conversion": [
+        null,
+        null,
+        null
+      ],
+      "discovery_call_delivered": [
+        null,
+        null,
+        null
+      ],
+      "paid_virtual_delivered": [
+        null,
+        null,
+        null
+      ],
+      "virtual_revenue": [
+        null,
+        null,
+        null
+      ],
+      "visit": [
+        null,
+        null,
+        null
+      ],
+      "conversion_1": [
+        null,
+        null,
+        null
+      ],
+      "in_person_visit": [
+        null,
+        null,
+        null
+      ],
+      "doctor_follow_up_post_virtual_visit_treatments_calls": [
+        null,
+        null,
+        null
+      ]
+    },
+    "disciplines": {
+      "physiotherapy": {
+        "total_revenue": [
+          null,
+          36099.38,
+          30394
+        ],
+        "assessments": [
+          null,
+          47,
+          45
+        ],
+        "treatments": [
+          null,
+          319,
+          273
+        ],
+        "alberta_health_services_assessments": [
+          null,
+          10,
+          11
+        ],
+        "percentage_of_total_assessments_alberta_health_services": [
+          null,
+          0.2127659574,
+          0.2444444444
+        ],
+        "alberta_health_services_treatments_total": [
+          null,
+          37,
+          37
+        ],
+        "alberta_health_services_assessments_hipknee_class": [
+          null,
+          5,
+          2
+        ],
+        "alberta_health_services_treatments_hipknee_class": [
+          null,
+          5,
+          6
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          6.434782609,
+          6.066666667
+        ],
+        "available_appointments": [
+          null,
+          null,
+          null
+        ],
+        "total_available_hours_total": [
+          null,
+          290.25,
+          273.5
+        ],
+        "total_available_hours_pt_only": [
+          null,
+          172.5,
+          139.25
+        ],
+        "total_booked_hours": [
+          null,
+          166.75,
+          138
+        ],
+        "arrived_appointments": [
+          null,
+          382,
+          329
+        ],
+        "utilization_with_kines": [
+          null,
+          0.5745047373,
+          0.5045703839
+        ],
+        "utilization_without_kines": [
+          null,
+          0.9666666667,
+          0.9910233393
+        ],
+        "treatment_plan_given": [
+          null,
+          30,
+          38
+        ],
+        "treatment_plan_utilization": [
+          null,
+          0.6382978723,
+          0.8444444444
+        ]
+      },
+      "massage_therapy": {
+        "total_revenue": [
+          null,
+          355,
+          775.5
+        ],
+        "assessments": [
+          null,
+          1,
+          2
+        ],
+        "treatments": [
+          null,
+          2,
+          5
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          2.333333333,
+          2.5
+        ],
+        "available_slots": [
+          null,
+          null,
+          null
+        ],
+        "hours_available": [
+          null,
+          3.75,
+          8
+        ],
+        "booked_hours": [
+          null,
+          4,
+          8.75
+        ],
+        "arrived_slots": [
+          null,
+          3,
+          7
+        ],
+        "utilization": [
+          null,
+          1.066666667,
+          1.09375
+        ],
+        "treatment_plan_given": [
+          null,
+          0,
+          0
+        ],
+        "treatment_plan_utilization": [
+          null,
+          0,
+          0
+        ]
+      },
+      "chiropractic": {
+        "total_revenue": [
+          null,
+          4458.9,
+          5649.9
+        ],
+        "assessments": [
+          null,
+          4,
+          6
+        ],
+        "treatments": [
+          null,
+          48,
+          54
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          10.2,
+          9
+        ],
+        "available_slots": [
+          null,
+          null,
+          null
+        ],
+        "hours_available": [
+          null,
+          28.25,
+          35.25
+        ],
+        "booked_hours": [
+          null,
+          25.25,
+          30.75
+        ],
+        "arrived_slots": [
+          null,
+          55,
+          62
+        ],
+        "utilization": [
+          null,
+          0.8938053097,
+          0.8723404255
+        ],
+        "treatment_plan_given": [
+          null,
+          0,
+          0
+        ],
+        "treatment_plan_utilization": [
+          null,
+          0,
+          0
+        ]
+      },
+      "pelvic_health": {
+        "total_revenue": [
+          null,
+          2355,
+          1215
+        ],
+        "assessments": [
+          null,
+          2,
+          4
+        ],
+        "treatments": [
+          null,
+          17,
+          6
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          1.5,
+          null
+        ],
+        "true_patient_visit_average_average": [
+          null,
+          6.522522523,
+          5.929824561
+        ],
+        "utilization": [
+          null,
+          0.8449922379,
+          0.8235536031
+        ],
+        "patient_visit_average_average": [
+          null,
+          null,
+          null
+        ],
+        "available_slots": [
+          null,
+          null,
+          null
+        ],
+        "arrived_slots": [
+          null,
+          null,
+          null
+        ],
+        "utilization_1": [
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  }
+}
