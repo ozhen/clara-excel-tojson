@@ -633,221 +633,643 @@
       }
     }
   },
-  "weekly_data": [
-    {
-      "date": "2026-02-16",
-      "clinic_wide_metrics": {
-        "total_revenue_all_services": 40454.28,
-        "total_payments_all_services": 48464.61,
-        "revenue_collected_4_wk_avg": 1.00441053,
-        "accounts_receivable_90_days": 0,
-        "total_accounts_receivable": 56578.43,
-        "online_bookings_via_jane": 36,
-        "total_assessments_all_services": 42,
-        "assessments_4_week_avg": 50.66666667,
-        "count_of_prescriptions_clinic_wide": 377,
-        "clinic_patient_visit_average": 7.440789474,
-        "submitted": 498,
-        "unsubmitted": 100,
-        "cancelled_total_assessments": 14,
-        "cancelled_assessments_online": 0,
-        "cancelled_assessments_online_percentage": 0,
-        "cancellation_percentage": 0.1707317073,
-        "google_reviews": 1227,
-        "total_calls_5530": 255,
-        "missed_calls": 17,
-        "answer_rate": 0.93,
-        "booking_rate": 0.69,
-        "new_bookings_online": 26,
-        "did_not_book": 8,
-        "winback_assessments_only": 0,
-        "new_assessment_revenue_collected_at_assessments": 39,
-        "new_assessment_revenue_percentage_collected_at_assessments": 0.9285714286,
-        "average_prescribed": 2.87,
-        "bookedprescribed_percentage_total": 0.5357142857,
-        "count_of_treatments_plan_given": 20,
-        "percentage_treatments_plan_used": 0.4761904762
-      },
-      "disciplines": {}
+  "dates": [
+    "2026-02-16",
+    "2026-02-09",
+    "2026-02-02"
+  ],
+  "time_series": {
+    "clinic_wide_metrics": {
+      "total_revenue_all_services": [
+        40454.28,
+        42360.64,
+        39202.17
+      ],
+      "total_product_revenue_all_services": [
+        null,
+        null,
+        null
+      ],
+      "theraguns_sold_count": [
+        null,
+        null,
+        null
+      ],
+      "pillows": [
+        null,
+        null,
+        null
+      ],
+      "custom_knee_brace": [
+        null,
+        null,
+        null
+      ],
+      "orthotics": [
+        null,
+        null,
+        null
+      ],
+      "total_payments_all_services": [
+        48464.61,
+        34022.04,
+        40068.6
+      ],
+      "revenue_collected_4_wk_avg": [
+        1.00441053,
+        0.9083875359,
+        1.022101583
+      ],
+      "accounts_receivable_90_days": [
+        0,
+        182,
+        60
+      ],
+      "total_accounts_receivable": [
+        56578.43,
+        65386.72,
+        57239.65
+      ],
+      "online_bookings_via_jane": [
+        36,
+        45,
+        43
+      ],
+      "consult_requests": [
+        null,
+        null,
+        null
+      ],
+      "consults_turned_assessments": [
+        null,
+        null,
+        null
+      ],
+      "total_assessments_all_services": [
+        42,
+        54,
+        56
+      ],
+      "assessments_4_week_avg": [
+        50.66666667,
+        55,
+        56
+      ],
+      "count_of_prescriptions_clinic_wide": [
+        377,
+        377,
+        340
+      ],
+      "clinic_patient_visit_average": [
+        7.440789474,
+        6.854545455,
+        6.071428571
+      ],
+      "cross_referral_assessments_total": [
+        null,
+        null,
+        null
+      ],
+      "submitted": [
+        498,
+        669,
+        599
+      ],
+      "unsubmitted": [
+        100,
+        129,
+        44
+      ],
+      "cancelled_total_assessments": [
+        14,
+        8,
+        9
+      ],
+      "cancelled_assessments_online": [
+        0,
+        0,
+        0
+      ],
+      "cancelled_assessments_online_percentage": [
+        0,
+        0,
+        0
+      ],
+      "cancelled_online_assessments_winback": [
+        null,
+        null,
+        null
+      ],
+      "cancellation_percentage": [
+        0.1707317073,
+        0.1149897331,
+        0.1236203091
+      ],
+      "count_of_fall_offs_total": [
+        null,
+        113,
+        103
+      ],
+      "fall_off_percentage_called": [
+        null,
+        null,
+        null
+      ],
+      "fb_reviews": [
+        null,
+        0,
+        0
+      ],
+      "google_reviews": [
+        1227,
+        1224,
+        1217
+      ],
+      "total_calls_5530": [
+        255,
+        281,
+        282
+      ],
+      "missed_calls": [
+        17,
+        15,
+        16
+      ],
+      "answer_rate": [
+        0.93,
+        0.94,
+        0.94
+      ],
+      "booking_rate": [
+        0.69,
+        0.73,
+        0.78
+      ],
+      "new_bookings_online": [
+        26,
+        26,
+        33
+      ],
+      "did_not_book": [
+        8,
+        7,
+        7
+      ],
+      "winback_assessments_only": [
+        0,
+        0,
+        2
+      ],
+      "new_assessment_revenue_collected_at_assessments": [
+        39,
+        56,
+        56
+      ],
+      "new_assessment_revenue_percentage_collected_at_assessments": [
+        0.9285714286,
+        1.037037037,
+        1
+      ],
+      "average_prescribed": [
+        2.87,
+        3.26,
+        3.35
+      ],
+      "bookedprescribed_percentage_total": [
+        0.5357142857,
+        0.5433526012,
+        0.5303867403
+      ],
+      "count_of_treatments_plan_given": [
+        20,
+        30,
+        38
+      ],
+      "percentage_treatments_plan_used": [
+        0.4761904762,
+        0.5555555556,
+        0.6785714286
+      ],
+      "net_promoter_score_collected_at_assessments": [
+        null,
+        null,
+        null
+      ],
+      "net_promoter_score_percentage_collected_at_assessments": [
+        null,
+        null,
+        null
+      ],
+      "follow_up_won": [
+        null,
+        null,
+        null
+      ],
+      "dropped_clients_won": [
+        null,
+        null,
+        null
+      ],
+      "new_assessment_revenue_submission": [
+        null,
+        null,
+        null
+      ],
+      "new_assessment_revenue_percentage": [
+        null,
+        null,
+        null
+      ],
+      "shockwave_alone": [
+        null,
+        null,
+        null
+      ],
+      "shockwave_pt": [
+        null,
+        null,
+        null
+      ],
+      "total_shockwave_revenue": [
+        null,
+        null,
+        null
+      ],
+      "total_patient_database": [
+        null,
+        null,
+        null
+      ],
+      "total_active_patients": [
+        null,
+        null,
+        null
+      ],
+      "calls_made_by_other_clinicians": [
+        null,
+        null,
+        null
+      ],
+      "alberta_health_services_active_clients": [
+        null,
+        null,
+        null
+      ],
+      "total_active_called": [
+        null,
+        null,
+        null
+      ],
+      "discovery_booked": [
+        null,
+        null,
+        null
+      ],
+      "doctor_faxees_sent": [
+        null,
+        null,
+        null
+      ],
+      "doctors_called": [
+        null,
+        null,
+        null
+      ],
+      "emails_sent": [
+        null,
+        null,
+        null
+      ],
+      "open_rate": [
+        null,
+        null,
+        null
+      ],
+      "email_responses": [
+        null,
+        null,
+        null
+      ],
+      "beth_outgoing_calls": [
+        null,
+        null,
+        null
+      ],
+      "beth_incoming_calls": [
+        null,
+        null,
+        null
+      ],
+      "total_calls": [
+        null,
+        null,
+        null
+      ],
+      "discovery_call_booked": [
+        null,
+        null,
+        null
+      ],
+      "conversion": [
+        null,
+        null,
+        null
+      ],
+      "discovery_call_delivered": [
+        null,
+        null,
+        null
+      ],
+      "paid_virtual_delivered": [
+        null,
+        null,
+        null
+      ],
+      "virtual_revenue": [
+        null,
+        null,
+        null
+      ],
+      "visit": [
+        null,
+        null,
+        null
+      ],
+      "conversion_1": [
+        null,
+        null,
+        null
+      ],
+      "in_person_visit": [
+        null,
+        null,
+        null
+      ],
+      "doctor_follow_up_post_virtual_visit_treatments_calls": [
+        null,
+        null,
+        null
+      ]
     },
-    {
-      "date": "2026-02-09",
-      "clinic_wide_metrics": {
-        "total_revenue_all_services": 42360.64,
-        "total_payments_all_services": 34022.04,
-        "revenue_collected_4_wk_avg": 0.9083875359,
-        "accounts_receivable_90_days": 182,
-        "total_accounts_receivable": 65386.72,
-        "online_bookings_via_jane": 45,
-        "total_assessments_all_services": 54,
-        "assessments_4_week_avg": 55,
-        "count_of_prescriptions_clinic_wide": 377,
-        "clinic_patient_visit_average": 6.854545455,
-        "submitted": 669,
-        "unsubmitted": 129,
-        "cancelled_total_assessments": 8,
-        "cancelled_assessments_online": 0,
-        "cancelled_assessments_online_percentage": 0,
-        "cancellation_percentage": 0.1149897331,
-        "count_of_fall_offs_total": 113,
-        "fb_reviews": 0,
-        "google_reviews": 1224,
-        "total_calls_5530": 281,
-        "missed_calls": 15,
-        "answer_rate": 0.94,
-        "booking_rate": 0.73,
-        "new_bookings_online": 26,
-        "did_not_book": 7,
-        "winback_assessments_only": 0,
-        "new_assessment_revenue_collected_at_assessments": 56,
-        "new_assessment_revenue_percentage_collected_at_assessments": 1.037037037,
-        "average_prescribed": 3.26,
-        "bookedprescribed_percentage_total": 0.5433526012,
-        "count_of_treatments_plan_given": 30,
-        "percentage_treatments_plan_used": 0.5555555556
+    "disciplines": {
+      "physiotherapy": {
+        "total_revenue": [
+          null,
+          36099.38,
+          30394
+        ],
+        "assessments": [
+          null,
+          47,
+          45
+        ],
+        "treatments": [
+          null,
+          319,
+          273
+        ],
+        "alberta_health_services_assessments": [
+          null,
+          10,
+          11
+        ],
+        "percentage_of_total_assessments_alberta_health_services": [
+          null,
+          0.2127659574,
+          0.2444444444
+        ],
+        "alberta_health_services_treatments_total": [
+          null,
+          37,
+          37
+        ],
+        "alberta_health_services_assessments_hipknee_class": [
+          null,
+          5,
+          2
+        ],
+        "alberta_health_services_treatments_hipknee_class": [
+          null,
+          5,
+          6
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          6.434782609,
+          6.066666667
+        ],
+        "available_appointments": [
+          null,
+          null,
+          null
+        ],
+        "total_available_hours_total": [
+          null,
+          290.25,
+          273.5
+        ],
+        "total_available_hours_pt_only": [
+          null,
+          172.5,
+          139.25
+        ],
+        "total_booked_hours": [
+          null,
+          166.75,
+          138
+        ],
+        "arrived_appointments": [
+          null,
+          382,
+          329
+        ],
+        "utilization_with_kines": [
+          null,
+          0.5745047373,
+          0.5045703839
+        ],
+        "utilization_without_kines": [
+          null,
+          0.9666666667,
+          0.9910233393
+        ],
+        "treatment_plan_given": [
+          null,
+          30,
+          38
+        ],
+        "treatment_plan_utilization": [
+          null,
+          0.6382978723,
+          0.8444444444
+        ]
       },
-      "disciplines": {
-        "physiotherapy": {
-          "total_revenue": 36099.38,
-          "assessments": 47,
-          "treatments": 319,
-          "alberta_health_services_assessments": 10,
-          "percentage_of_total_assessments_alberta_health_services": 0.2127659574,
-          "alberta_health_services_treatments_total": 37,
-          "alberta_health_services_assessments_hipknee_class": 5,
-          "alberta_health_services_treatments_hipknee_class": 5,
-          "patient_visit_average_4_wk": 6.434782609,
-          "total_available_hours_total": 290.25,
-          "total_available_hours_pt_only": 172.5,
-          "total_booked_hours": 166.75,
-          "arrived_appointments": 382,
-          "utilization_with_kines": 0.5745047373,
-          "utilization_without_kines": 0.9666666667,
-          "treatment_plan_given": 30,
-          "treatment_plan_utilization": 0.6382978723
-        },
-        "massage_therapy": {
-          "total_revenue": 355,
-          "assessments": 1,
-          "treatments": 2,
-          "patient_visit_average_4_wk": 2.333333333,
-          "hours_available": 3.75,
-          "booked_hours": 4,
-          "arrived_slots": 3,
-          "utilization": 1.066666667,
-          "treatment_plan_given": 0,
-          "treatment_plan_utilization": 0
-        },
-        "chiropractic": {
-          "total_revenue": 4458.9,
-          "assessments": 4,
-          "treatments": 48,
-          "patient_visit_average_4_wk": 10.2,
-          "hours_available": 28.25,
-          "booked_hours": 25.25,
-          "arrived_slots": 55,
-          "utilization": 0.8938053097,
-          "treatment_plan_given": 0,
-          "treatment_plan_utilization": 0
-        },
-        "pelvic_health": {
-          "total_revenue": 2355,
-          "assessments": 2,
-          "treatments": 17,
-          "patient_visit_average_4_wk": 1.5,
-          "true_patient_visit_average_average": 6.522522523,
-          "utilization": 0.8449922379
-        }
-      }
-    },
-    {
-      "date": "2026-02-02",
-      "clinic_wide_metrics": {
-        "total_revenue_all_services": 39202.17,
-        "total_payments_all_services": 40068.6,
-        "revenue_collected_4_wk_avg": 1.022101583,
-        "accounts_receivable_90_days": 60,
-        "total_accounts_receivable": 57239.65,
-        "online_bookings_via_jane": 43,
-        "total_assessments_all_services": 56,
-        "assessments_4_week_avg": 56,
-        "count_of_prescriptions_clinic_wide": 340,
-        "clinic_patient_visit_average": 6.071428571,
-        "submitted": 599,
-        "unsubmitted": 44,
-        "cancelled_total_assessments": 9,
-        "cancelled_assessments_online": 0,
-        "cancelled_assessments_online_percentage": 0,
-        "cancellation_percentage": 0.1236203091,
-        "count_of_fall_offs_total": 103,
-        "fb_reviews": 0,
-        "google_reviews": 1217,
-        "total_calls_5530": 282,
-        "missed_calls": 16,
-        "answer_rate": 0.94,
-        "booking_rate": 0.78,
-        "new_bookings_online": 33,
-        "did_not_book": 7,
-        "winback_assessments_only": 2,
-        "new_assessment_revenue_collected_at_assessments": 56,
-        "new_assessment_revenue_percentage_collected_at_assessments": 1,
-        "average_prescribed": 3.35,
-        "bookedprescribed_percentage_total": 0.5303867403,
-        "count_of_treatments_plan_given": 38,
-        "percentage_treatments_plan_used": 0.6785714286
+      "massage_therapy": {
+        "total_revenue": [
+          null,
+          355,
+          775.5
+        ],
+        "assessments": [
+          null,
+          1,
+          2
+        ],
+        "treatments": [
+          null,
+          2,
+          5
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          2.333333333,
+          2.5
+        ],
+        "available_slots": [
+          null,
+          null,
+          null
+        ],
+        "hours_available": [
+          null,
+          3.75,
+          8
+        ],
+        "booked_hours": [
+          null,
+          4,
+          8.75
+        ],
+        "arrived_slots": [
+          null,
+          3,
+          7
+        ],
+        "utilization": [
+          null,
+          1.066666667,
+          1.09375
+        ],
+        "treatment_plan_given": [
+          null,
+          0,
+          0
+        ],
+        "treatment_plan_utilization": [
+          null,
+          0,
+          0
+        ]
       },
-      "disciplines": {
-        "physiotherapy": {
-          "total_revenue": 30394,
-          "assessments": 45,
-          "treatments": 273,
-          "alberta_health_services_assessments": 11,
-          "percentage_of_total_assessments_alberta_health_services": 0.2444444444,
-          "alberta_health_services_treatments_total": 37,
-          "alberta_health_services_assessments_hipknee_class": 2,
-          "alberta_health_services_treatments_hipknee_class": 6,
-          "patient_visit_average_4_wk": 6.066666667,
-          "total_available_hours_total": 273.5,
-          "total_available_hours_pt_only": 139.25,
-          "total_booked_hours": 138,
-          "arrived_appointments": 329,
-          "utilization_with_kines": 0.5045703839,
-          "utilization_without_kines": 0.9910233393,
-          "treatment_plan_given": 38,
-          "treatment_plan_utilization": 0.8444444444
-        },
-        "massage_therapy": {
-          "total_revenue": 775.5,
-          "assessments": 2,
-          "treatments": 5,
-          "patient_visit_average_4_wk": 2.5,
-          "hours_available": 8,
-          "booked_hours": 8.75,
-          "arrived_slots": 7,
-          "utilization": 1.09375,
-          "treatment_plan_given": 0,
-          "treatment_plan_utilization": 0
-        },
-        "chiropractic": {
-          "total_revenue": 5649.9,
-          "assessments": 6,
-          "treatments": 54,
-          "patient_visit_average_4_wk": 9,
-          "hours_available": 35.25,
-          "booked_hours": 30.75,
-          "arrived_slots": 62,
-          "utilization": 0.8723404255,
-          "treatment_plan_given": 0,
-          "treatment_plan_utilization": 0
-        },
-        "pelvic_health": {
-          "total_revenue": 1215,
-          "assessments": 4,
-          "treatments": 6,
-          "true_patient_visit_average_average": 5.929824561,
-          "utilization": 0.8235536031
-        }
+      "chiropractic": {
+        "total_revenue": [
+          null,
+          4458.9,
+          5649.9
+        ],
+        "assessments": [
+          null,
+          4,
+          6
+        ],
+        "treatments": [
+          null,
+          48,
+          54
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          10.2,
+          9
+        ],
+        "available_slots": [
+          null,
+          null,
+          null
+        ],
+        "hours_available": [
+          null,
+          28.25,
+          35.25
+        ],
+        "booked_hours": [
+          null,
+          25.25,
+          30.75
+        ],
+        "arrived_slots": [
+          null,
+          55,
+          62
+        ],
+        "utilization": [
+          null,
+          0.8938053097,
+          0.8723404255
+        ],
+        "treatment_plan_given": [
+          null,
+          0,
+          0
+        ],
+        "treatment_plan_utilization": [
+          null,
+          0,
+          0
+        ]
+      },
+      "pelvic_health": {
+        "total_revenue": [
+          null,
+          2355,
+          1215
+        ],
+        "assessments": [
+          null,
+          2,
+          4
+        ],
+        "treatments": [
+          null,
+          17,
+          6
+        ],
+        "patient_visit_average_4_wk": [
+          null,
+          1.5,
+          null
+        ],
+        "true_patient_visit_average_average": [
+          null,
+          6.522522523,
+          5.929824561
+        ],
+        "utilization": [
+          null,
+          0.8449922379,
+          0.8235536031
+        ],
+        "patient_visit_average_average": [
+          null,
+          null,
+          null
+        ],
+        "available_slots": [
+          null,
+          null,
+          null
+        ],
+        "arrived_slots": [
+          null,
+          null,
+          null
+        ],
+        "utilization_1": [
+          null,
+          null,
+          null
+        ]
       }
     }
-  ]
+  }
 }
