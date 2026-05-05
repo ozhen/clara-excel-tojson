@@ -3,133 +3,174 @@ import json
 import re
 import math
 
-def to_snake_case(text):
+def expand_and_clean_metric(text):
     """
-    Converts messy Excel headers into clean, predictable snake_case keys.
-    Handles newlines, special characters, and random spacing.
+    Expands domain-specific abbreviations for LLM readability and converts to snake_case.
+    Strips discipline prefixes since they will be contextually nested.
     """
-    if pd.isna(text) or not str(text).strip():
-        return None
+    text = str(text).lower().strip()
     
-    text = str(text).strip()
+    # Remove redundant prefixes (they will be nested in the JSON)
+    text = re.sub(r'^(pt|rmt|chiro|pelvic health)\s+', '', text)
+    
+    # Expand medical/clinic abbreviations for AI semantic comprehension
+    replacements = {
+        r'\bax\b': 'assessments',
+        r'\btx\b': 'treatments',
+        r'\bpva\b': 'patient_visit_average',
+        r'\bar\b': 'accounts_receivable',
+        r'\bnbo\b': 'new_bookings_online',
+        r'\bdnb\b': 'did_not_book',
+        r'\bf/u\b': 'follow_up',
+        r'\bmd\b': 'doctor',
+        r'\bvv\b': 'virtual_visit',
+        r'\brx\b': 'prescriptions',
+        r'\btp\b': 'treatment_plan',
+        r'\bahs\b': 'alberta_health_services',
+        r'\bnar\b': 'new_assessment_revenue',
+        r'\bnps\b': 'net_promoter_score',
+        r'\bappts\b': 'appointments'
+    }
+    
+    for pattern, replacement in replacements.items():
+        text = re.sub(pattern, replacement, text)
+
+    # Convert to standard snake_case
     text = text.replace('\n', ' ').replace('-', ' ')
-    text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
-    text = re.sub(r'[\s]+', '_', text).lower()
+    text = re.sub(r'[^a-z0-9\s_]', '', text)
+    text = re.sub(r'[\s_]+', '_', text).strip('_')
     
     return text
 
 def _clean_value(val):
-    """Helper to convert pandas NaNs and empty spaces to standard Python None."""
     if pd.isna(val) or str(val).strip() in ['', 'nan', 'None']:
         return None
     return str(val).strip()
 
 def parse_scoreboard(file_path):
-    """
-    Ingests the Excel file, extracts metadata, and formats the weekly data.
-    """
-    # Read without headers to manually process the multi-row structure
+    print(f"Reading {file_path}...")
     df = pd.read_excel(file_path, header=None, engine='openpyxl')
     
-    metadata = {}
-    col_idx_to_key = {}
+    metadata = {"clinic_wide_metrics": {}, "disciplines": {}}
+    schema_map = {} # Maps column indices to their nested location
     
-    # Forward-fill row 0 (Categories) using a pure Python list to avoid Pandas dtype errors.
-    # (Pandas will throw an error if we try to ffill a string into a column it inferred as float64)
-    raw_categories = df.iloc[0].tolist()
-    categories = []
-    current_category = None
+    # Extract Row 0 manually to avoid Pandas dtype conflicts
+    categories = [cat if pd.notna(cat) and str(cat).strip() not in ['', 'nan'] else None for cat in df.iloc[0].tolist()]
     
-    for cat in raw_categories:
-        if pd.notna(cat) and str(cat).strip() not in ['', 'nan', 'None']:
-            current_category = cat
-        categories.append(current_category)
+    # --- STEP 1: PARSE HEADERS & BUILD SEMANTIC ROUTING ---
+    current_group = "clinic_wide_metrics"
+    current_subgroup = None
+    seen_paths = set()
     
-    # --- STEP 1: PARSE HEADERS & METADATA ---
-    for col_idx in range(len(df.columns)):
-        metric_name = df.iloc[1, col_idx]
-        
-        # Skip purely empty spacer columns
-        if pd.isna(metric_name) or not str(metric_name).strip():
+    for col_idx in range(1, len(df.columns)): # Skip column 0 (Date)
+        raw_name = df.iloc[1, col_idx]
+        if pd.isna(raw_name) or not str(raw_name).strip():
             continue 
             
-        # The first column contains Dates. Excel often leaves the header blank or uses a slash.
-        if col_idx == 0 and (pd.isna(metric_name) or str(metric_name).strip() == '\\'):
-            key = "date"
-        else:
-            key = to_snake_case(metric_name)
+        raw_str = str(raw_name).strip().lower()
         
-        # Deduplication safeguard
-        original_key = key
-        counter = 1
-        while key in metadata or key in col_idx_to_key.values():
-            key = f"{original_key}_{counter}"
-            counter += 1
-            
-        col_idx_to_key[col_idx] = key
-        
-        # Build metadata (excluding the date column)
-        if key != 'date':
-            metadata[key] = {
-                "original_name": str(metric_name).strip().replace('\n', ' '),
-                "category": _clean_value(categories[col_idx]), # Fixed: using our safe Python list
-                "focus": _clean_value(df.iloc[2, col_idx]),
-                "source": _clean_value(df.iloc[3, col_idx]),
-                "role": _clean_value(df.iloc[4, col_idx]),
-                "target_or_formula": _clean_value(df.iloc[5, col_idx])
-            }
+        # Stateful Routing: Detect when the Excel shifts to a new discipline
+        if "pt total revenue" in raw_str:
+            current_group, current_subgroup = "disciplines", "physiotherapy"
+        elif "rmt total revenue" in raw_str:
+            current_group, current_subgroup = "disciplines", "massage_therapy"
+        elif "chiro" in raw_str and "total revenue" in raw_str:
+            current_group, current_subgroup = "disciplines", "chiropractic"
+        elif "pelvic health" in raw_str and "total revenue" in raw_str:
+            current_group, current_subgroup = "disciplines", "pelvic_health"
 
-    # --- STEP 2: PARSE TIME-SERIES DATA ---
-    data_start_row = 6
+        clean_key = expand_and_clean_metric(raw_name)
+        
+        # Handle duplicates safely within the same nesting level
+        schema_path = f"{current_group}.{current_subgroup}.{clean_key}"
+        original_key = clean_key
+        counter = 1
+        while schema_path in seen_paths:
+            clean_key = f"{original_key}_{counter}"
+            counter += 1
+            schema_path = f"{current_group}.{current_subgroup}.{clean_key}"
+            
+        seen_paths.add(schema_path)
+        
+        schema_map[col_idx] = {
+            "group": current_group,
+            "subgroup": current_subgroup,
+            "key": clean_key
+        }
+        
+        # Build nested metadata
+        meta_obj = {
+            "original_name": str(raw_name).strip().replace('\n', ' '),
+            "category": _clean_value(categories[col_idx]),
+            "target_or_formula": _clean_value(df.iloc[5, col_idx])
+        }
+        
+        if current_subgroup:
+            if current_subgroup not in metadata["disciplines"]:
+                metadata["disciplines"][current_subgroup] = {}
+            metadata["disciplines"][current_subgroup][clean_key] = meta_obj
+        else:
+            metadata["clinic_wide_metrics"][clean_key] = meta_obj
+
+    # --- STEP 2: PARSE TIME-SERIES WITH STRICT TYPING & NULL DROPPING ---
     time_series_data = []
     
-    for index, row in df.iloc[data_start_row:].iterrows():
-        # Stop processing if the date column is completely empty (end of data)
-        if pd.isna(row[0]):
+    for index, row in df.iloc[6:].iterrows():
+        raw_date = row[0]
+        if pd.isna(raw_date):
             continue
             
-        week_data = {}
-        for col_idx, key in col_idx_to_key.items():
+        try:
+            parsed_date = pd.to_datetime(raw_date)
+            # Catch dirty date artifacts like "6"
+            if pd.isna(parsed_date) or parsed_date.year < 2000: 
+                continue
+            date_str = parsed_date.strftime('%Y-%m-%d')
+        except Exception:
+            continue
+            
+        week_data = {
+            "date": date_str,
+            "clinic_wide_metrics": {},
+            "disciplines": {}
+        }
+        
+        for col_idx, schema in schema_map.items():
             val = row[col_idx]
             
-            if key == 'date':
-                # Safely format Pandas Timestamps to ISO strings
-                if isinstance(val, pd.Timestamp):
-                    week_data[key] = val.strftime('%Y-%m-%d')
-                else:
-                    week_data[key] = str(val).strip()
+            # Sparse Payload: Drop nulls to save LLM tokens
+            if pd.isna(val):
+                continue
+                
+            # Strict Typing: Force numeric or drop
+            try:
+                val = float(val)
+                if math.isnan(val):
+                    continue
+                # Cast whole numbers to integers
+                val = int(val) if val.is_integer() else val
+            except (ValueError, TypeError):
+                continue # Discard string artifacts (e.g. backticks) in data columns
+
+            # Nest data contextually
+            if schema["subgroup"]:
+                if schema["subgroup"] not in week_data["disciplines"]:
+                    week_data["disciplines"][schema["subgroup"]] = {}
+                week_data["disciplines"][schema["subgroup"]][schema["key"]] = val
             else:
-                # Convert numpy types to native Python types for clean JSON serialization
-                if pd.isna(val):
-                    week_data[key] = None
-                elif isinstance(val, (int, float)):
-                    # Handle python's strictness with NaN floats
-                    week_data[key] = float(val) if not math.isnan(val) else None
-                else:
-                    week_data[key] = str(val).strip()
-                    
+                week_data["clinic_wide_metrics"][schema["key"]] = val
+                
         time_series_data.append(week_data)
         
-    return {
-        "metadata": metadata,
-        "weekly_data": time_series_data
-    }
+    return {"metadata": metadata, "weekly_data": time_series_data}
 
 if __name__ == "__main__":
     input_file = 'Scoreboard Test.xlsx'
     output_file = 'output.json'
-    
-    print(f"Reading {input_file}...")
     try:
         result = parse_scoreboard(input_file)
-        
-        # --- STEP 3: EXPORT JSON ---
         with open(output_file, 'w') as f:
             json.dump(result, f, indent=2)
-            
-        print(f"Success! Extracted {len(result['metadata'])} metrics.")
-        print(f"Processed {len(result['weekly_data'])} weeks of data.")
-        print(f"Output saved to -> {output_file}")
-        
+        print(f"Success! Output saved to -> {output_file}")
     except Exception as e:
-        print(f"Error processing file: {e}")
+        print(f"Error: {e}")
